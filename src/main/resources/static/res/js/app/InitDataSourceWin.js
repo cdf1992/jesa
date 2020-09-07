@@ -1,0 +1,134 @@
+Ext.require([
+             'Ext.form.*',
+             'Ext.window.Window',
+             'Ext.ux.window.Notification'
+            ]);
+
+
+Ext.define('Sys.app.InitDataSourceWin', {
+	extend : 'Ext.window.Window',
+	id:'initDataWin',
+	autoShow:true,
+	title:systemConfig_sjkpzwjsz,
+	width:500,
+	height:260,
+	layout:'fit',
+	plain:true,
+	items:[{
+		xtype:'form',
+		frame:true,
+		name:'initDataSource',
+		border:false,
+		fieldDefaults:{
+			labelWidth:100
+		},
+		defaultType:'textfield',
+		items:[{
+			fieldLabel:'driverClassName',
+			name:'driverClassName',
+			id:'driverClassName',
+			emptyText:'oracle.jdbc.driver.OracleDriver',
+			tooltip:systemConfig_qsr+'driverClassName',
+			anchor:'100%'
+		},{
+			fieldLabel:'jdbc.url',
+			name:'url',
+			id:'url',
+			emptyText:'jdbc:oracle:thin:@127.0.0.1:1521:JES',
+			tooltip:systemConfig_qsr+'URL',
+			anchor:'100%'
+		},{
+			fieldLabel:'jdbc.user',
+			name:'username',
+			id:'user',
+			tooltip:systemConfig_qsr+'user',
+			anchor:'100%'
+		},{
+			fieldLabel:'jdbc.password',
+			name:'password',
+			id:'password',
+			inputType: 'password',
+			tooltip:systemConfig_qsr+'password',
+			anchor:'100%'
+		},{
+			xtype:'numberfield',
+			name:'maxIdle',
+			fieldLabel:'maxIdle',
+			value:20
+		},{
+			xtype:'numberfield',
+			name:'maxActive',
+			fieldLabel:'maxActive',
+			value:20
+		},{
+			name:'jndi',
+			id:'jndi',
+			allowBlank:true,
+			fieldLabel:'jndi',
+			value:''
+		}]
+	}],
+	
+	buttons:[{
+		text:systemConfig_szmrz,
+		inputType:'button',
+		handler:function(){
+			 Ext.getCmp("driverClassName").setValue(driverClassName);
+			 Ext.getCmp("url").setValue(url);
+			 Ext.getCmp("user").setValue(user);
+			 Q('field[name=maxIdle]').setValue(maxIdle);
+			 Q('field[name=maxActive]').setValue(maxActive);
+			 Q('field[name=jndi]').setValue(jndi);
+		}
+	},{
+		text:systemConfig_cs,
+		inputType:'button',
+		handler:function(){
+			var form = Q('panel[name=initDataSource]');
+			if(!form.getForm().isValid()){
+				return;
+			}
+			Ext.Ajax.request({
+				url:'initDataSourceTest.html', 
+				params:{
+					driverClassName:Ext.getCmp("driverClassName").getValue(),
+					url:Ext.getCmp("url").getValue(),
+					user:Ext.getCmp("user").getValue(),
+					password:Ext.getCmp("password").getValue(),
+					jndi:Ext.getCmp("jndi").getValue()
+				},
+				success:function(response){
+					var text=response.responseText;
+					if("success"==text){
+						jesAlert(systemConfig_sjljcg);
+						Ext.getCmp("save").setDisabled(false);
+					}else{
+						jesErrorAlert(systemConfig_sjljsb);
+					}
+				}
+			});
+		}
+	},{
+		text:systemConfig_bc,
+		inputType:'submit',
+		id: 'save',
+		disabled:true,
+		handler:function(){
+			var form = Q('panel[name=initDataSource]');
+			form.getForm().submit({
+				standardSubmit:true,
+				clientValidation: true,
+				url:'initDataSourceSave.html',
+				params:{
+					driverClassName:Ext.getCmp("driverClassName").getValue(),
+					url:Ext.getCmp("url").getValue(),
+					user:Ext.getCmp("user").getValue(),
+					password:Ext.getCmp("password").getValue(),
+					maxIdle:Q('field[name=maxIdle]').getValue,
+					maxActive:Q('field[name=maxActive]').getValue,
+					jndi:Ext.getCmp("jndi").getValue()
+				}
+			});
+		}
+	}]
+});

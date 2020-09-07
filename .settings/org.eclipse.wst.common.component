@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="jesa-1.0-SNAPSHOT">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/target/generated-sources/annotations"/>
+        <dependent-module archiveName="jes.dis2-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/dis2/dis2">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jes.vine-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/vine/vine">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jes.toolkit-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jes.toolkit/jes.toolkit">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jes.ext-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jes.ext/jes.ext">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jes-api-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jes-api/jes-api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jes.partner-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jes.partner/jes.partner">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jes.dna-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/dna/dna">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jesa.main3-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jesa.main3/jesa.main3">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jesa.main-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jesa.main/jesa.main">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jesa.login-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jesa.login/jesa.login">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jesa.home-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/jesa.home/jesa.home">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jes.bsys-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/bsys/bsys">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jes.sessionKeeper-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/sessionKeeper/sessionKeeper">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jes.taxExt-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/taxExt/taxExt">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/jesa/target/classes"/>
+        <property name="context-root" value="jesa"/>
+    </wb-module>
+</project-modules>

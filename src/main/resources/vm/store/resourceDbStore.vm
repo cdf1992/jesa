@@ -1,0 +1,15 @@
+Ext.create('Ext.data.Store', {
+	    fields:['selected','res_imp_id','res_imp_name'],
+	    proxy: {
+	    	type:'ajax',
+			url:'getResourceImpList.ajax',
+			extraParams:{
+				ssId:'${ssId}',
+				resId:'${resId}',
+				roleId:'${roleId}'
+			},
+			reader:{
+				type:'json'
+			}
+	    }
+	})

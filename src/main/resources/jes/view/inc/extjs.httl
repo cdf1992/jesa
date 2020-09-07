@@ -1,0 +1,33 @@
+<!-- Style Includes1 -->
+<link type="text/css"	href="$!{app}/res/js/extjs/resources/css/ext-all-$!{theme}.css" rel="stylesheet" />
+<link type="text/css"	href="$!{app}/res/css/icon/icon.css"  rel="stylesheet" />
+<link type="text/css"	href="$!{app}/res/db/other/ionicons.min.css"  rel="stylesheet" />
+<link rel="stylesheet" href="$!{app}/res/db/font-awesome-default/css/font-awesome.min.css">
+
+<!-- JavaScript Includes -->
+<script type="text/javascript" src="$!{app}/res/js/extjs/ext-all.js"></script>
+<script type="text/javascript" src="$!{app}/res/js/extjs/ext-theme-$!{theme}.js"></script>
+<script type="text/javascript" src="$!{app}/res/js/extjs/IE8.fix.js"></script>
+<script type="text/javascript" src="$!{app}/res/js/jes-extjs.js?20190724"></script>
+<script type="text/javascript" src="$!{app}/res/js/extjs/locale/ext-lang-$!{language}.js" $!{languageCharset}></script>
+
+<link type="text/css"	href="$!{app}/res/js/extjs/src/ux/form/field/BoxSelect.css"  rel="stylesheet" />
+<script type="text/javascript">
+ var  jesLanguage = "$!{language}";
+ var notificationTitle = jesLanguage=='en'?notificationTitle = 'prompt':'提示';
+ 
+ if(Ext.isIE6 || Ext.isIE7){
+	Ext.BLANK_IMAGE_URL = '$!{app}/res/js/extjs/resources/themes/images/default/tree/s.gif';
+ }
+</script>
+<style type="text/css">
+    .x-grid-row-add .x-grid-cell{
+        background-color:#CCFF99;
+    }
+    .x-grid-row-del .x-grid-cell{
+        background-color:#FFCCCC;
+    }
+    .x-grid-row-modify .x-grid-cell{
+        background-color:#FFFF99;
+    }
+</style>

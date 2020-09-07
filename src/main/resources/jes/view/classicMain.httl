@@ -1,0 +1,118 @@
+$!{include("/jes/view/inc/top.httl")}
+<html>
+<head>
+$!{include("/jes/view/inc/head.httl")}
+<link rel="shortcut icon" href="$!{app}/res/img/favicon.ico">
+$!{include("/jes/view/inc/extjs.httl")}
+<link rel="stylesheet" href="$!{app}/res/db/font-awesome-default/css/font-awesome.min.css">
+<link type="text/css"	href="$!{app}/res/css/classicMain.css"	rel="stylesheet" />
+<link type="text/css"	href="$!{app}/res/css/sys.css"	rel="stylesheet" />
+<script type="text/javascript" src="$!{app}/res/js/highcharts/highcharts-all.js" charset="GBK"></script>
+<script type="text/javascript" src="$!{app}/res/js/highcharts/highcharts-more.js"></script>
+
+
+<style type="text/css">
+.search-item {
+    padding: 15px,15px;
+    white-space: normal;
+    color: #555;
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
+}
+
+ .search-item:hover {
+    display:block;
+    background:#70f3ff;
+    color:#000;
+    text-decoration:none;
+}
+	
+.x-btn-default-toolbar-small .x-btn-inner
+{ 
+	font-family:宋体;
+	font-size:12px; 
+}
+
+.x-tab-bar {
+    position: relative;
+    font-size: 11px;
+    background-color: #f4f5f7;
+    border: 0}
+.x-tab-bar .x-tab-bar-body {
+    z-index: 2;
+    border: 0;}
+.bg_dark{
+    background-image:linear-gradient(90deg, #f4f5f7, #d1d4d7);
+    background-image:-webkit-linear-gradient(90deg, #f4f5f7, #d1d4d7);
+    background-image:-moz-linear-gradient(90deg, #f4f5f7, #d1d4d7);
+    background-image:-ms-linear-gradient(90deg, #f4f5f7, #d1d4d7);
+    background-image:-o-linear-gradient(90deg, #f4f5f7, #d1d4d7);
+}
+
+</style>
+</head>
+<body>
+<div style="height: 1000px;">
+<!--  -->
+<% //该DIV只是作为占位符存在,否则界面装入时会先显示Body中的内容  %>
+</div>
+<script>
+//以下为portlet定义区
+$!{portlet}
+</script>
+
+
+</body>
+<script type="text/javascript">
+    <!-- 此标签中内容由Server端生成，为Application-js提供数据，不使用Ajax取数，减少服务器请求的次数 -->
+    var expirationDate = '$!{expirationDate}';
+    var activation = '$!{activation}';
+
+    var subSystems=$!{subSystems};
+    var userId='$!{userId}';
+    var userCname='$!{userCname}';
+    var sysJesRunDuration=$!{JES_PAGE_EXPIRE};
+    var passwordInited='$!{passwordInited}';
+    var lastIpAndDate = '$!{lastIpAndDate}';
+    var envType='$!{envType}';
+    var productName='$!{productName}';
+    var isFirstLogin = '$!{isFirstLogin}';
+    var passwordExpire = $!{passwordExpire};
+    var pwdExpireDays = $!{pwdExpireDays};
+    var jesLogo = '$!{jesLogo}';
+    var jeslogoWidth = $!{jeslogoWidth};
+    var jeslogoHeight = $!{jeslogoHeight};
+    var billboardList = $!{billboardList};
+    var userRight = $!{userRight};
+    var isThird = $!{isThird};
+    var billboardListShow = $!{billboardListShow};
+    var iconMax = '$!{iconMax}';
+    var iconUpdate = '$!{iconUpdate}';
+    var iconExit = '$!{iconExit}';
+    var portlet=getPortlet();
+    var isBillboardAuthority = $!{isBillboardAuthority};
+    var perSession = $!{perSession};
+    var tasks = $!{tasks};
+    var isShowSendType = '$!{isShowSendType}';
+//	Ext.application('Sys.app.Application');
+	 
+	Ext.require('Sys.app.ClassicApplication');
+	Ext.require('Ext.ux.jes.PagingToolbar');
+	Ext.onReady(function() {
+         var app = new Sys.app.ClassicApplication();
+        // Ext.get("poweredby").dom.href=app.home;
+         window.top.document.addMsg=function(msg){
+     		app.addMsg(msg);
+     	 };
+     	window.top.document.jesRunDuration=-2; <%//此变量用于记录最长未使用JES系统的时间，超时将注销用户登录。%>
+     	window.top.document.resetJesRunDuration=function(){
+     		window.top.document.jesRunDuration=0;
+		}
+     	document.onclick=window.top.document.resetJesRunDuration;
+     	document.onkeydown=window.top.document.resetJesRunDuration;
+ 	});
+	
+</script>
+<iframe width="0" height="0" id="download"></iframe>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<head>
+<!-- Style Includes -->
+$!{include("/jes/view/inc/head.httl")}
+$!{include("/jes/view/inc/extjs.httl")}
+<script type="text/javascript" src="$!{app}/res/js/sys/smsTemplate.js"></script>
+
+<style>
+	.search-icon{
+		background-image: url(res/img/icon16/find.png);	
+		background-repeat: no-repeat;
+	}
+	</style>
+	</head>
+	<body> 
+	
+<script  type="text/javascript">
+var path='$!{path}';
+var isAdmin = '$!{userId}';
+var instId = '$!{instId}';
+</script>
+<iframe width="0" height="0" id="download"></iframe>
+</body>
+
+</html>

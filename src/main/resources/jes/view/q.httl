@@ -1,0 +1,10 @@
+$!{include("/jes/view/inc/top.httl")}
+<html>
+<head>
+$!{include("/jes/view/inc/head.httl")}
+$!{head}
+</head>
+<body>
+$!{content}
+</body>
+</html>

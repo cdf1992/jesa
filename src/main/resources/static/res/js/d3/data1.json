@@ -1,0 +1,142 @@
+{
+  "nodes": [
+    {
+      "cid": "a",
+      "name": "A",
+      "group": 1
+    },
+    {
+      "cid": "b",
+      "name": "B",
+      "group": 0
+    },
+    {
+      "cid": "c",
+      "name": "C",
+      "group": 0
+    },
+    {
+      "cid": "d",
+      "name": "D",
+      "group": 0
+    },
+    {
+      "cid": "e",
+      "name": "E",
+      "group": 1
+    },
+    {
+      "cid": "f",
+      "name": "F",
+      "group": 1
+    }
+  ],
+  "links": [
+    {
+      "source": "a",
+      "target": "b",
+      "relationType": 0,
+      "relation": "json字段1"
+    },
+    {
+      "source": "a",
+      "target": "c",
+      "relationType": 0,
+      "relation": "json字段2"
+    },
+    {
+      "source": "b",
+      "target": "c",
+      "relationType": 0,
+      "relation": "json字段3"
+    },
+    {
+      "source": "b",
+      "target": "d",
+      "relationType": 2,
+      "relation": "json字段4"
+    },
+    {
+      "source": "a",
+      "target": "d",
+      "relationType": 2,
+      "relation": "json字段5"
+    },
+    {
+      "source": "a",
+      "target": "d",
+      "relationType": 2,
+      "relation": "json字段5"
+    },
+    {
+      "source": "a",
+      "target": "d",
+      "relationType": 2,
+      "relation": "json字段5"
+    },
+    {
+      "source": "a",
+      "target": "d",
+      "relationType": 2,
+      "relation": "json字段5"
+    },
+    {
+      "source": "a",
+      "target": "d",
+      "relationType": 2,
+      "relation": "json字段5"
+    },
+    {
+      "source": "a",
+      "target": "d",
+      "relationType": 2,
+      "relation": "json字段5"
+    },
+    {
+      "source": "c",
+      "target": "d",
+      "relationType": 2,
+      "relation": "json字段6"
+    },
+    {
+      "source": "e",
+      "target": "a",
+      "relationType": 2,
+      "relation": "json字段7"
+    },
+    {
+      "source": "f",
+      "target": "c",
+      "relationType": 1,
+      "relation": "json字段8"
+    },
+    {
+      "source": "f",
+      "target": "b",
+      "relationType": 1,
+      "relation": "json字段9"
+    }
+  ],
+  "nodeGroupDescription": [
+    {
+      "name": "自然人",
+      "path": "./public/img/person.jpg"
+    },
+    {
+      "name": "企业",
+      "path": "./public/img/company.jpg"
+    }
+  ],
+  "linkRelationTypeDescription": [
+    "流入",
+    "流出",
+    "平衡"
+  ],
+  "template": {
+    "node": "<div name='{id}'><span >{name} {value:ellipsis(10)}</span></div>",
+    "link": "<div name='{id}'><span >{name} {value:ellipsis(10)}</span></div>"
+  }
+}
+
+
+

@@ -1,0 +1,15 @@
+<html>
+<head>
+<!-- Style Includes -->
+$!{include("/jes/view/inc/head.httl")}
+$!{include("/jes/view/inc/extjs.httl")}
+<script type="text/javascript" src="$!{app}/res/js/app/messageListHistory.vm"></script>
+</head>
+	<body>
+	<iframe width="0" height="0" id="download"></iframe> 
+	<script type="text/javascript">
+		var deletebillOrMessage = '$!{DELETE_BILL_MESSAGE}';
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+$!{include("/jes/view/inc/top.httl")}
+<!DOCTYPE html>
+<html>
+<head>
+$!{include("/jes/view/inc/head.httl")}
+$!{include("/jes/view/inc/extjs.httl")}
+
+
+
+
+<script type="text/javascript">
+	var cols =$!{cols};
+	var fields =$!{fields};
+</script>
+
+
+<script type="text/javascript" src="$!{app}/res/js/sys/instMapping.js"></script>
+</head>
+<body>
+	<iframe width="0" height="0" id="download"></iframe>
+</body>
+</html>

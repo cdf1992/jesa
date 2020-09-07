@@ -1,0 +1,75 @@
+<script>
+    Ext.require([
+        'Ext.container.Viewport',
+        'Ext.ux.IFrame',
+        'Ext.ux.window.Notification',
+        'Ext.util.DelayedTask'
+    ]);
+    Ext.onReady(function() {
+        Ext.QuickTips.init();
+        Ext.create('Ext.container.Viewport', {
+            layout: 'fit',
+            items: [{
+                xtype:'form',
+                border: 0,
+                padding : '10 150 10 150',
+                fieldDefaults: {
+                    msgTarget: 'side'
+                },
+                autoScroll : true,
+                items:$!{owlConfig},
+                buttons: [{
+                    text: '${message("jes.vm.sys.ssConfig.bc")}',
+                    handler: function() {
+                        var form = this.up('form').getForm();
+                        if (form.isValid()) {
+                            form.submit({
+                                url : 'saveSsConfig.ajax?f=*.0001.add&ssId=${ssId}',
+                                success : function(form,action) {
+                                    jesAlert(action.result.success);
+                                },
+                                failure : function(form,action) {
+                                    switch (action.failureType) {
+                                        case Ext.form.action.Action.CLIENT_INVALID:
+                                            jesAlert('${message("jes-api.vm.pub.fillMemoWin.bdwx")}');
+                                            break;
+                                        case Ext.form.action.Action.CONNECT_FAILURE:
+                                            jesAlert('${message("jes-api.vm.pub.fillMemoWin.ljfwqsb")}');
+                                            break;
+                                        case Ext.form.action.Action.SERVER_INVALID:
+                                            jesAlert('${message("jes-api.vm.pub.fillMemoWin.sb")},'+action.result.failure);
+                                    }
+                                }
+                            });
+                        }
+                    }
+                }]
+            }]
+        });
+        var descWin = Ext.create('Ext.window.Window',{
+			closeAction : 'hide',
+            width:400,
+            height:180,
+            layout: 'fit',
+            modal:true,
+            buttons:[{
+                text : '${message("jes.vm.sys.ssConfig.gb")}',
+                handler : function() {
+                    this.up('window').close();
+                }
+            }]
+        });
+        var buttons = Ext.ComponentQuery.query('button[name=descBtn]');
+        for(var i in buttons){
+            buttons[i].on('click',function(me){
+                var desc = "";
+                if(!Ext.isEmpty(me.desc)){
+                    desc = me.desc;
+                }
+                descWin.setTitle(me.title);
+                descWin.update(desc);
+                descWin.show();
+            });
+        }
+    });
+</script>

@@ -1,0 +1,23 @@
+<!-- Style Includes -->
+<link type="text/css"	href="$!{app}/res/js/extjs/resources/css/ext-all-$!{theme}.css" rel="stylesheet" />
+<link type="text/css"	href="$!{app}/res/css/icon/icon.css"  rel="stylesheet" />
+<link type="text/css"	href="$!{app}/res/db/other/ionicons.min.css"  rel="stylesheet" />
+
+<!-- JavaScript Includes -->
+<script type="text/javascript" src="$!{app}/res/js/extjs/ext-all.js"></script>
+<script type="text/javascript" src="$!{app}/res/js/extjs/ext-theme-$!{theme}.js"></script>
+<script type="text/javascript" src="$!{app}/res/js/extjs/IE8.fix.js"></script>
+<script type="text/javascript" src="$!{app}/res/js/jes-extjs.js"></script>
+<script type="text/javascript" src="$!{app}/res/js/extjs/locale/ext-lang-zh_CN.js" charset="GBK"></script>
+
+<style type="text/css">
+    .x-grid-row-add .x-grid-cell{
+        background-color:#CCFF99;
+    }
+    .x-grid-row-del .x-grid-cell{
+        background-color:#FFCCCC;
+    }
+    .x-grid-row-modify .x-grid-cell{
+        background-color:#FFFF99;
+    }
+</style>

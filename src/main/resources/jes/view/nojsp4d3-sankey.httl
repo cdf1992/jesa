@@ -1,0 +1,50 @@
+$!{include("/jes/view/inc/top.httl")}
+<html>
+<head>
+$!{include("/jes/view/inc/head.httl")}
+$!{include("/jes/view/inc/extjs.httl")}
+<script type="text/javascript" src="$!{app}/res/js/d3/d3.v2.min.js"></script>
+
+</head>
+<style>
+
+
+#chart {
+  height: 500px;
+}
+
+.node rect {
+  cursor: move;
+  fill-opacity: .9;
+  shape-rendering: crispEdges;
+}
+
+.node text {
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.link {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+
+.link:hover {
+  stroke-opacity: .5;
+}
+
+</style>
+<body>
+<script type="text/javascript" src="$!{app}/res/js/d3/d3-sankey.js"></script>
+	<!--Template reuse.before_content-->
+	$!{before_content}
+	<!--Template main. content-->
+ 	$!{content}
+    <!--Template reuse.after_content-->
+    $!{after_content}
+	<script>
+	$!{jsContent}
+	</script>
+</body>
+</html>

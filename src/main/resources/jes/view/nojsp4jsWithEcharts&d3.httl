@@ -1,0 +1,32 @@
+$!{include("/jes/view/inc/top.httl")}
+<!DOCTYPE html>
+<html>
+<head>
+$!{include("/jes/view/inc/head.httl")}
+$!{include("/jes/view/inc/extjs.httl")}
+
+    <link type="text/css" rel="stylesheet" href="$!{app}/res/css/combined.css">
+
+<script type="text/javascript" src="$!{app}/res/js/jq/jquery-1.9.1.min.js" ></script>
+<script type="text/javascript" src="$!{app}/res/db/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="$!{app}/res/db/echarts/theme/infographic.js"></script>
+
+<script type="text/javascript" src="$!{app}/res/js/d3/d3.js"></script>
+<script type="text/javascript" src="$!{app}/res/js/d3/relation.js"></script>
+
+
+
+</head>
+<body id="body" style="background-color: white;">
+<iframe width="0" height="0" frameborder="0" id="download" name="download"></iframe>
+<!--Template reuse.before_content-->
+$!{before_content}
+<!--Template main. content-->
+$!{content}
+<!--Template reuse.after_content-->
+$!{after_content}
+<script>
+    $!{jsContent}
+</script>
+</body>
+</html>

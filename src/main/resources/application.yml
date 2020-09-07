@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /jes
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+spring:
+  application:
+    name: jesa
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 30MB
+      max-request-size: 30MB
+  main:
+    allow-bean-definition-overriding: true
+mybatis:
+  mapper-locations:
+    - classpath*:/jes/ioc/dao/sys/mysql/*.xml
+    - classpath*:/jes/ioc/dao/sys/oracle/*.xml
+    - classpath*:/jes/ioc/dao/sys/sqlserver/*.xml

@@ -1,0 +1,19 @@
+$!{include("/jes/view/inc/top.httl")}
+<html>
+<head>
+$!{include("/jes/view/inc/head.httl")}
+$!{include("/jes/view/inc/extjs.httl")}
+</head>
+<body>
+	<!--Template reuse.before_content-->
+	$!{before_content}
+	<!--Template main. content-->
+ 	$!{content}
+    <!--Template reuse.after_content-->
+    $!{after_content}
+	<script>
+	$!{jsVariable}
+	$!{jsContent}
+	</script>
+</body>
+</html>

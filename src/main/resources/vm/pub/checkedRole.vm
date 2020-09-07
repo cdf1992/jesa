@@ -1,0 +1,68 @@
+{
+	show : function(){
+		
+		var win = Ext.create('Ext.window.Window', {
+			 title: '【${resImpName}】设置角色',
+			 height: 350,
+      		 width: 300,
+      		 modal:true,
+      		 layout: 'fit',
+      		 items:{
+      			 layout : 'fit',
+      			 xtype : 'gridpanel',
+      			 layout : 'fit',
+      			 store : Ext.create('Ext.data.Store', {
+      				 fields:['ROLE_ID','ROLE_NAME','CHECKED'],
+      				 data : $!{datas.encodeJson}
+      			 }),
+      			 columns : [{
+      				 text:'角色编号',
+      				 dataIndex : 'ROLE_ID',
+      				 flex:1 
+      			 },{
+      				 text:'角色名称',
+      				 dataIndex : 'ROLE_NAME',
+      				 flex:1 
+      			 },{
+      				 text: '是否有权限', flex:1, align: 'center', dataIndex: 'CHECKED', xtype:'actioncolumn',
+      				 items:[{
+      					 getClass:function(v){
+      						 if(v=='Y'){
+      							 return 'success-icon';
+      						 }else{
+      							 return 'cancel-icon';
+      						 }
+      					 }, 
+      					 handler: function(grid, rowIndex, colIndex) {	
+      						 var record = grid.getStore().getAt(rowIndex);
+      						 var flag = record.get('CHECKED');
+      						 if(flag == 'Y'){
+      							 flag = 'N';
+      						 }else{
+      							 flag = 'Y';
+      						 }
+      						 Ext.Ajax.request({
+      							 url: 'saveCheckedRole.ajax?f=BSYS.0302',
+      							 params: {
+      								 resId : '${resId}',
+      								 roleId : record.get('ROLE_ID'),
+      								 resImpId : '${resImpId}',
+      								 resImpName : '${resImpName}',
+      								 ssId : '${ssId}',
+      								 flag : flag
+      							 },
+      							 failure:function(response,opts){
+      								 alert('服务器异常['+response.status+'],请关闭浏览器稍后重试.');
+      							 },
+      							 success: function(response,req){
+      								 record.set('CHECKED', flag);
+      								 jesAlert(Ext.decode(response.responseText), 5000);
+      							 }
+      						 });
+      					 }
+      				 }]
+      			 }]
+      		 }
+		}).show();
+	}
+}

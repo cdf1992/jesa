@@ -1,0 +1,44 @@
+$!{include("/jes/view/inc/top.httl")}
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<title>---数据库配置文件设置---</title>
+<link type="text/css"
+	href="res/css/main.css"	rel="stylesheet" />
+$!{include("/jes/view/inc/extjs.httl")}
+</head>
+<body>
+<script type="text/javascript" src="res/js/jes-extjs.js"></script>
+<script type="text/javascript" src="res/js/app/InitDataSourceWin.js"></script>
+
+<script type="text/javascript">
+<!-- 此标签中内容由Server端生成，为Application-js提供数据，不使用Ajax取数，减少服务器请求的次数 -->
+ 	var driverClassName='$!{driverClassName}';
+ 	var url='$!{url}';
+ 	var user = '$!{user}';
+ 	var maxIdle = '$!{maxIdle}';
+ 	var maxActive = '$!{maxActive}';
+ 	var jndi ='$!{jndi}';
+</script>
+<!-- 
+	  oracle.jdbc.driver.OracleDriver
+	  jdbc:oracle:thin:@127.0.0.1:1521:JES
+
+      com.ibm.db2.jcc.DB2Driver
+      jdbc:db2://127.0.0.1:50000/JES
+      
+      jdbc.driverClassName=com.mysql.jdbc.Driver
+	  jdbc:mysql://10.6.9.157:3306/fex?useUnicode=true&characterEncoding=GBK
+-->
+<script type="text/javascript">
+	  
+	Ext.require('Sys.app.InitDataSourceWin');
+	Ext.onReady(function() {
+        var w = new Sys.app.InitDataSourceWin();
+        w.show();
+ 	});
+	
+</script>
+</body>
+</html>

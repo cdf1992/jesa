@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+* div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+html body {
+  height: 100%;
+  width: 100%;
+}
+html body #main-content {
+  height: 100%;
+  width: 100%;
+}
+html body #main-content #mainContentHeader {
+  width: 100%;
+  height: 128px;
+  margin-bottom: 20px;
+}
+html body #main-content #mainContentHeader .bg-aqua {
+  background-color: #00c0ef !important;
+}
+html body #main-content #mainContentHeader .bg-green {
+  background-color: #00a65a !important;
+}
+html body #main-content #mainContentHeader .bg-yellow {
+  background-color: #f39c12 !important;
+}
+html body #main-content #mainContentHeader .bg-red {
+  background-color: #dd4b39 !important;
+}
+@media screen and (max-width: 992px) {
+  html body #main-content #mainContentHeader .deheader-box {
+    width: 50%;
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 992px) {
+  html body #main-content #mainContentHeader .deheader-box {
+    width: 25%;
+  }
+}
+html body #main-content #mainContentHeader .deheader-box {
+  height: 100%;
+  padding: 0 15px;
+  float: left;
+}
+html body #main-content #mainContentHeader .deheader-box .small-box {
+  height: 100%;
+  transition: all 0.3s;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  color: #fff;
+  position: relative;
+}
+html body #main-content #mainContentHeader .deheader-box .small-box .inner {
+  padding: 10px;
+  height: 100px;
+}
+html body #main-content #mainContentHeader .deheader-box .small-box .inner h3 {
+  font-size: 38px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  white-space: nowrap;
+  padding: 0;
+}
+html body #main-content #mainContentHeader .deheader-box .small-box .inner p {
+  font-size: 15px;
+}
+html body #main-content #mainContentHeader .deheader-box .small-box .icon {
+  position: absolute;
+  top: -5px;
+  right: 8px;
+  transition: all 0.3s;
+  font-size: 80px;
+  color: rgba(0,0,0,0.15);
+}
+html body #main-content #mainContentHeader .deheader-box .small-box .small-box-footer {
+  position: relative;
+  text-align: center;
+  padding: 3px 0;
+  color: rgba(255,255,255,0.8);
+  display: block;
+  z-index: 10;
+  background: rgba(0,0,0,0.1);
+  text-decoration: none;
+}
+html body #main-content #mainContentHeader .deheader-box .small-box:hover {
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.3);
+}
+html body #main-content #mainContentHeader .deheader-box .small-box:hover .icon {
+  transform: scale(1.03);
+}
+html body #main-content #mainContentBody {
+  padding-bottom: 20px;
+  height: -webkit-calc(100% - 128px);
+  height: -moz-calc(100% - 128px);
+  height: calc(100% - 128px);
+}
+html body #main-content #mainContentBody #contentBody-left {
+  float: left;
+  height: 100%;
+  padding-left: 14px;
+  margin-bottom: 60px;
+  width: 49%;
+}
+html body #main-content #mainContentBody #contentBody-left #calendar {
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+}
+html body #main-content #mainContentBody #contentBody-left #calendar .east3 {
+  background-color: #337ab7;
+  border: #337ab7;
+}
+html body #main-content #mainContentBody #contentBody-left #calendar .east2 {
+  background-color: #00a65a;
+  border: #00a65a;
+}
+html body #main-content #mainContentBody #contentBody-left #calendar .shewai {
+  background-color: #00c0ef;
+  border: #00c0ef;
+}
+html body #main-content #mainContentBody #contentBody-left #calendar .duiwai {
+  background-color: #3c8dbc !important;
+  border: #3c8dbc !important;
+}
+html body #main-content #mainContentBody #contentBody-left #calendar .count1::after,
+html body #main-content #mainContentBody #contentBody-left #calendar .count2::after,
+html body #main-content #mainContentBody #contentBody-left #calendar .count3::after,
+html body #main-content #mainContentBody #contentBody-left #calendar .count4::after,
+html body #main-content #mainContentBody #contentBody-left #calendar .count5::after,
+html body #main-content #mainContentBody #contentBody-left #calendar .count6::after,
+html body #main-content #mainContentBody #contentBody-left #calendar .count7::after,
+html body #main-content #mainContentBody #contentBody-left #calendar .count8::after,
+html body #main-content #mainContentBody #contentBody-left #calendar .count9::after,
+html body #main-content #mainContentBody #contentBody-left #calendar .countMax::after {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background: #f00;
+  font-size: 12px;
+  position: absolute;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 13px;
+  top: 1px;
+  right: 1px;
+}
+html body #main-content #mainContentBody #contentBody-left #calendar .count1::after {
+  content: '1';
+}
+html body #main-content #mainContentBody #contentBody-left #calendar .count2::after {
+  content: '2';
+}
+html body #main-content #mainContentBody #contentBody-left #calendar .count3::after {
+  content: '3';
+}
+html body #main-content #mainContentBody #contentBody-left #calendar .count4::after {
+  content: '4';
+}
+html body #main-content #mainContentBody #contentBody-left #calendar .count5::after {
+  content: '5';
+}
+html body #main-content #mainContentBody #contentBody-left #calendar .count6::after {
+  content: '6';
+}
+html body #main-content #mainContentBody #contentBody-left #calendar .count7::after {
+  content: '7';
+}
+html body #main-content #mainContentBody #contentBody-left #calendar .count8::after {
+  content: '8';
+}
+html body #main-content #mainContentBody #contentBody-left #calendar .count9::after {
+  content: '9';
+}
+html body #main-content #mainContentBody #contentBody-left #calendar .countMax::after {
+  content: '...';
+}
+html body #main-content #mainContentBody #contentBody-right {
+  float: left;
+  height: 100%;
+  width: 50%;
+  position: relative;
+  padding-left: 20px;
+}
+html body #main-content #mainContentBody #contentBody-right #contentRight-top {
+  width: 100%;
+  height: 50%;
+  float: left;
+}
+html body #main-content #mainContentBody #contentBody-right #contentRight-bottom {
+  float: left;
+  width: 100%;
+  height: 50%;
+}

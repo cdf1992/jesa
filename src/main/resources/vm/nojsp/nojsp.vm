@@ -1,0 +1,7 @@
+<script>
+Ext.require('Ext.ux.window.Notification');
+
+Ext.onReady(function(){
+	jesAlert('${nojspmsg}');
+})
+</script>

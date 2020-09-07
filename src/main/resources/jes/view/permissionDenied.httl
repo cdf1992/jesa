@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+		<title>您没有该操作的权限</title>
+</head>
+<body>
+	<h2>权限不足,您不能进行本操作</h2>
+	<!-- 
+	$!{fId}
+	 -->
+</body>
+</html>

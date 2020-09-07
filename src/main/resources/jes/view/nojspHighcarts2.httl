@@ -1,0 +1,18 @@
+$!{include("/jes/view/inc/top.httl")}
+<html>
+<head>
+$!{include("/jes/view/inc/head.httl")}
+$!{include("/jes/view/inc/extjs.httl")}
+<script type="text/javascript" src="$!{app}/res/js/highcharts/highcharts-all.js" charset="GBK"></script>
+<script type="text/javascript" src="$!{app}/res/js/highcharts/highcharts-more.js"></script>
+<script type="text/javascript" src="$!{app}/res/js/highcharts/adapters/standalone-framework.js"></script>
+<script type="text/javascript" src="$!{app}/res/js/highcharts/modules/drilldown.js"></script>
+
+</head>
+<body>
+<iframe width="0" height="0" frameborder="0" id="download"></iframe>
+   <script>
+	$!{jsContent}
+	</script>
+</body>
+</html>

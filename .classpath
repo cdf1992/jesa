@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry including="**/*.java" kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/jes.beehive-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/jes.bsys-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/jes.dis2-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/jes.dna-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/jes.ext-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/jes.owl-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/jes.partner-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/jes.queen-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/jes.sessionKeeper-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/jes.taxExt-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/jes.toolkit-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/jes.vine-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/jesa.home-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/jesa.login-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/jesa.main-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/jesa.main3-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/jes-api-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/jes.vms_hf-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="lib/jes.vms-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

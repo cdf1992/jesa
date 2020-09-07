@@ -1,0 +1,20 @@
+$!{include("/jes/view/inc/top.httl")}
+<html>
+<head>
+$!{include("/jes/view/inc/head.httl")}
+$!{include("/jes/view/inc/extjs.httl")}
+</head>
+<body>
+	<script type="text/javascript">
+        Ext.onReady(function() {
+            Ext.MessageBox.confirm("提示", "是否强制注销已登录用户？", function (code) {
+                if (code == "yes") {
+                    window.location = "${mainUrl}";
+                } else {
+                    window.location = "exit.do";
+                }
+            });
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "nodes": [
+    {
+      "id": "0",
+      "name": "A",
+      "group": 1
+    },{
+      "id": "1",
+      "name": "B",
+      "group": 1
+    }
+  ],
+  "links": [
+    {"source":"0","target":"1","relationType":0,"relation":"json字段1"}
+  ],
+  "nodeGroupDescription": [
+    "自然人":,
+    "企业":
+  ],
+  "linkRelationTypeDescription": [
+    "流入",
+    "流出",
+    "流入&&流出"
+  ],
+  "template": {
+    "node": "<div name='{id}'><span >{name} {value:ellipsis(10)}</span></div>",
+    "link": "<div name='{id}'><span >{name} {value:ellipsis(10)}</span></div>"
+  }
+}

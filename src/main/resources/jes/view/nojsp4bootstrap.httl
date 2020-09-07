@@ -1,0 +1,18 @@
+$!{include("/jes/view/inc/top.httl")}
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    $!{include("/jes/view/inc/head.httl")}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    $!{include("/jes/view/inc/jquery.httl")}
+    <!-- Bootstrap core CSS -->
+    <link href="res/db/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+ 	<link href="res/db/bootstrap/css/base.css" rel="stylesheet">
+ 	<script type="text/javascript" src="$!{app}/res/db/bootstrap/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+	$!{bodyContent}
+  </body>
+</html>

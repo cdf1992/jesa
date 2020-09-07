@@ -1,0 +1,72 @@
+<#macro renderFields mfields>
+			<#list mfields as f>
+			{name:'${f.name}',type:'${f.type!'string'}'}<#if f_has_next=true>,</#if>
+			</#list>
+</#macro>
+<#macro renderColumns mcols>
+<#list mcols as c>
+			{
+			    text   : '${c.text}',
+			    flex: ${c.flex},
+			    sortable : true,
+			    dataIndex: '${c.dataIndex}'
+			}<#if c_has_next=true>,</#if>
+</#list>
+</#macro>
+
+Ext.define('Jes.portlet.${pageId}.P$${portletId}', {
+	extend : 'Ext.grid.Panel',
+	uses: [
+        'Ext.data.ArrayStore'
+    ],
+    height:200,
+    
+    portalConfig: function(){
+    	Ext.create('Ext.window.Window',{
+		    title: '配置',
+		    modal:true,
+		    x:event.X,
+		    y:event.Y,
+		    height:130,
+		    iconCls:'ux-notification-icon-information',
+		    html: '你要配置['+this.self.getName()+']吗？',
+		    buttons: [
+				  { 
+				  	text: '确定',
+				  	handler:function(){
+				  		this.up('window').close();
+				  	}
+				  }
+				],
+		    animateTarget: this
+		}).show();
+    },
+    portalRefresh: function(){
+    	this.mask();
+    	this.store.reload();
+    	this.unmask();
+    },
+    
+    store: Ext.create('Ext.data.ArrayStore', {
+        fields:[
+                <@renderFields fields/>
+        	  ] ,
+        data: ${data.toJson()}
+    }),
+
+    change: function(val) {
+        if (val > 0) {
+            return '<span style="color:black;">' + val + '</span>';
+        } else if (val < 0) {
+            return '<span style="color:red;">' + val + '</span>';
+        }
+        return val;
+    },
+    
+    stripeRows: true,
+    columnLines: true,
+    columns: [
+              <@renderColumns columns/>
+             ]
+
+});

@@ -1,0 +1,10 @@
+<!-- Style Includes -->
+<link type="text/css"	href="$!{app}/res/css/icon/icon.css"  rel="stylesheet" />
+<link type="text/css"	href="$!{app}/res/db/other/ionicons.min.css"  rel="stylesheet" />
+
+<!-- JavaScript Includes -->
+<script type="text/javascript" src="$!{app}/res/js/jq/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="$!{app}/res/js/jq/jquery-migrate-1.2.1.min.js"></script>
+
+
+ 
